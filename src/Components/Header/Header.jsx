@@ -2,39 +2,43 @@ import React from "react";
 import logo from "../../img/logo.png";
 import { Link } from "react-router-dom";
 import { ImSearch } from "react-icons/im";
-import { FaBars } from "react-icons/fa";
+import { IoReorderThreeOutline } from "react-icons/io5";
+
 import { FaTimes } from "react-icons/fa";
 
 import { useRef } from "react";
 
 const Header = () => {
   const navRef = useRef();
-  const showNavbar = () => {};
+  const showNavBar = () => {
+    navRef.current.classList.toggle("responsive_nav");
+  };
   return (
     <nav className="header">
       <img src={logo} alt="logo" />
 
-      <div className="navbar">
+      {/* <div className="navbar">
         <Link to="/">TV Shows</Link>
         <Link to="/movies">Movies</Link>
         <Link to="/recentlyAdded">Recently Added</Link>
         <Link to="/myList">My List</Link>
-      </div>
+      </div> */}
 
-      <div className="navmob">
+      <div className="navmob" ref={navRef}>
         <Link to="/">TV Shows</Link>
         <Link to="/movies">Movies</Link>
         <Link to="/recentlyAdded">Recently Added</Link>
         <Link to="/myList">My List</Link>
+
+        <button className="nav-btn nav-close-btn" onClick={showNavBar}>
+          <FaTimes />
+        </button>
       </div>
 
-      <button>
-        <FaBars />
+      <button className="nav-btn" onClick={showNavBar}>
+        <IoReorderThreeOutline />
       </button>
-      <button>
-        <FaTimes />
-      </button>
-      <ImSearch />
+      <ImSearch className="search" />
     </nav>
   );
 };
