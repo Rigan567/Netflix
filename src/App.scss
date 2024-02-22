@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 $bg: rgb(16, 16, 16);
+
 * {
   margin: 0;
   padding: 0;
@@ -43,7 +44,7 @@ a {
     }
     a:hover {
       border-bottom: 3px solid white;
-      border-radius: 2px;
+      border-radius: 3.5px;
       padding: 5px 0;
     }
   }
@@ -77,13 +78,8 @@ a {
     cursor: pointer;
     transition: all 0.3s;
 
-    &:nth-child(odd) {
-      font-size: 2.5rem;
-      margin: 10px;
-    }
-
     &:hover {
-      color: rgba(255, 255, 255, 0.658);
+      color: rgba(255, 255, 255, 0.582);
     }
   }
 }
@@ -108,6 +104,10 @@ a {
     position: absolute;
     top: 1rem;
     right: 1.1rem;
+    transition: all 0.5s;
+    &:hover {
+      color: rgba(255, 255, 255, 0.582);
+    }
   }
   .search {
     position: relative;

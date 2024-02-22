@@ -17,15 +17,8 @@ const Header = () => {
     <nav className="header">
       <img src={logo} alt="logo" />
 
-      {/* <div className="navbar">
-        <Link to="/">TV Shows</Link>
-        <Link to="/movies">Movies</Link>
-        <Link to="/recentlyAdded">Recently Added</Link>
-        <Link to="/myList">My List</Link>
-      </div> */}
-
       <div className="navmob" ref={navRef}>
-        <Link to="/">TV Shows</Link>
+        <Link to="/tv_shows">TV Shows</Link>
         <Link to="/movies">Movies</Link>
         <Link to="/recentlyAdded">Recently Added</Link>
         <Link to="/myList">My List</Link>
