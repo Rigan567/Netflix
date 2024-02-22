@@ -15,7 +15,20 @@ const Header = () => {
   };
   return (
     <nav className="header">
-      <img src={logo} alt="logo" />
+      <Link to="/Netflix">
+        <img
+          src={logo}
+          alt="logo"
+          style={{
+            height: "60px",
+            cursor: "pointer",
+            position: "relative",
+            left: "-10px",
+            top: "5px",
+            padding: "16px",
+          }}
+        />
+      </Link>
 
       <div className="navmob" ref={navRef}>
         <Link to="/tv_shows">TV Shows</Link>
